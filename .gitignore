@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Read-only scratch clones of the hardware/firmware repos (NEVER committed).
+# /understand-* clone here shallow + read-only, then read. Disposable.
+.refs/
+
+# Secrets — only the *.example files are tracked.
+secrets/*.env
+secrets/device_map.yaml
+secrets/device_map.xlsx
+
+# Local firmware build artifacts (the .hex/factory-data a test plan flashes).
+# Root-anchored so it does NOT swallow docs/firmware/.
+/firmware/
+
+# Vendor programmer + proprietary multi-product firmware, copied in only for local hex enumeration.
+# Large (~18 MB) and not ours to publish -> never committed.
+vendor/
+
+# Firmware binaries never belong in this (QA-automation) repo.
+*.hex
+
+# Generated dashboard (build artifact over the gitignored results/ — rebuild with build.py)
+dashboard/index.html
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,37 @@
+# Per-product testing repo — references + context. Written by /new-test, refined
+# by the understand-* skills. There is NO shared test engine: this file just
+# records what we're testing and where issues go. Everything else is bespoke.
+#
+# The hardware/firmware/software repos are READ-ONLY references. Nothing in this
+# repo ever modifies, commits to, or pushes to them — they are reviewed in place.
+
+product: io-board
+
+# One entry per hardware repo. `name` must be UNIQUE — it's the doc filename
+# (docs/hardware/<name>.md) AND the issue-routing key: a hardware defect files an
+# issue on THAT hardware repo. READ-ONLY.
+hardware:
+  - { name: main-board, repo: https://github.com/Viaanix/VX-0057.git, ref: main }
+
+# One entry per firmware repo. `name` -> docs/firmware/<name>.md and routing.
+# READ-ONLY.
+# A vx_ioboard_fw release ships all three images (hex files); each variant gets
+# its own name so a firmware defect routes to the right image (same source repo).
+firmware:
+  - { name: tank-monitor, repo: https://github.com/Viaanix/vx_ioboard_fw.git, ref: main }
+  - { name: callbox, repo: https://github.com/Viaanix/vx_ioboard_fw.git, ref: main }
+  - { name: rtu, repo: https://github.com/Viaanix/vx_ioboard_fw.git, ref: main }
+
+# One entry per software repo (cloud/backend/app/API/dashboard the product uses),
+# if any. A software defect routes to THAT software repo. Omit if none. READ-ONLY.
+software:
+  - { name: cloud, repo: https://github.com/Viaanix/715-unitedRentals-Cloud.git, ref: main }
+
+# Cloud connection params, if the product reports telemetry. Omit if none.
+# VX Olympus (ThingsBoard-based).
+cloud:
+  thingsboard_base_url: "https://portal.dev.vxolympus.com"
+
+# What the bench running this has (context for building bespoke tests — not a
+# framework setting). A test plan uses whatever of these it needs.
+bench: { jlink: true, ppk2: false, serial: false }

@@ -1,0 +1,11 @@
+# Extra deps for the tank-monitor test harness beyond the vx-station-setup base
+# (which already provides pylink / pyserial / nrfutil). Install on the bench with:
+#   pip install -r tests/tank-monitor/requirements.txt
+#
+# Only needed for AUTOMATIC 4-20 mA injection via the Waveshare Modbus RTU Analog
+# Output 8CH (waveshare.py). Without them, run.py falls back to manual prompts.
+pymodbus>=3.0
+pyserial
+# station.py (multi-board dashboard) reads the VDUI device map from secrets/device_map.xlsx
+openpyxl>=3.0
+# requests + python-dotenv (cloud verify) come from the cloud-checkin harness / bench base

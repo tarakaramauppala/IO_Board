@@ -1,0 +1,7 @@
+# Raw run captures are large and disposable — keep them out of git.
+# Commit the small summaries/reports your test plan + dashboard produce.
+*
+!.gitignore
+!**/summary.*
+!**/report.*
+!**/*.md

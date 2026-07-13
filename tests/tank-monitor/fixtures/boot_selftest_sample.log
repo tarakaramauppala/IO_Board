@@ -1,0 +1,27 @@
+*** Booting nRF Connect SDK ***
+[00:00:00.412,000] <inf> vx_app_version: Firmware title io_tank_monitor
+[00:00:00.412,100] <inf> vx_app_version: Firmware version v2.0.4-h-0097161
+[00:00:00.412,200] <inf> vx_app_version: Application type io_board_app_tank_monitor
+[00:00:00.412,300] <inf> vx_app_version: Compile time: Jun 12 2026 09:14:55
+[00:00:00.998,000] <inf> rtos: comm_thread_initiated
+[00:00:01.004,000] <inf> rtos: viaanix_thread initiated
+[00:00:01.010,000] <inf> vx_app: Viaanix APP Init
+[00:00:01.220,000] <inf> testbench: ***IO BOARD TEST STARTED***
+[00:00:01.221,000] <inf> testbench: Firmware Version: 	io_tank_monitor 	v2.0.4-h-0097161
+[00:00:01.230,000] <inf> testbench: Main Power 13.8v or 12v: ON
+[00:00:01.231,000] <inf> testbench: External Power 12v: OK
+[00:00:01.232,000] <inf> testbench: PSC 60 AC: LOW
+[00:00:01.233,000] <inf> testbench: PSC 60 Power 13.8V: LOW
+[00:00:01.234,000] <inf> testbench: PSC 60 Battery: LOW
+[00:00:01.300,000] <inf> testbench: External Memory: OK
+[00:00:01.420,000] <inf> testbench: DI1_OFF: PASS
+[00:00:01.421,000] <inf> testbench: DI2_OFF: PASS
+[00:00:01.520,000] <inf> testbench: AN1: OK (4000 uA)
+[00:00:01.521,000] <inf> testbench: AN2: OK (12000 uA)
+[00:00:01.522,000] <inf> testbench: AN3: OK (20000 uA)
+[00:00:01.523,000] <inf> testbench: AN4: OK (0 uA)
+[00:00:01.700,000] <inf> testbench: RS232 ECHO COMMUNICATION: OK
+[00:00:01.800,000] <inf> testbench: RS485 ECHO COMMUNICATION: OK
+[00:00:02.000,000] <inf> testbench: ***IO BOARD TEST ENDED***
+[00:00:05.310,000] <inf> out: Channel: 0, state transition: APP_IO_ON_UNKNOWN_EDGE --> APP_IO_ON_RISING_EDGE
+[00:00:08.110,000] <inf> out: Channel: 0, state transition: APP_IO_ON_RISING_EDGE --> APP_IO_ON_FALLING_EDGE
